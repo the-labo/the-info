@@ -1,0 +1,25 @@
+{
+  "TheInfo": {
+    "description": "Info of the-component",
+    "displayName": "TheInfo",
+    "methods": []
+  },
+  "TheInfoStyle": {
+    "description": "Style for TheInfo",
+    "displayName": "TheInfoStyle",
+    "methods": [],
+    "props": {
+      "options": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Style options",
+        "defaultValue": {
+          "value": "{}",
+          "computed": false
+        }
+      }
+    }
+  }
+}
