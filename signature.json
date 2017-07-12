@@ -2,7 +2,76 @@
   "TheInfo": {
     "description": "Info of the-component",
     "displayName": "TheInfo",
-    "methods": []
+    "methods": [
+      {
+        "name": "Header",
+        "docblock": null,
+        "modifiers": [
+          "static"
+        ],
+        "params": [
+          {
+            "name": "{ className, children }",
+            "type": null
+          }
+        ],
+        "returns": null
+      },
+      {
+        "name": "Body",
+        "docblock": null,
+        "modifiers": [
+          "static"
+        ],
+        "params": [
+          {
+            "name": "{ className, children }",
+            "type": null
+          }
+        ],
+        "returns": null
+      },
+      {
+        "name": "Row",
+        "docblock": null,
+        "modifiers": [
+          "static"
+        ],
+        "params": [
+          {
+            "name": "{ label, value, className, children }",
+            "type": null
+          }
+        ],
+        "returns": null
+      }
+    ],
+    "props": {
+      "data": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.Object"
+        },
+        "required": false,
+        "description": "Info data",
+        "defaultValue": {
+          "value": "{}",
+          "computed": false
+        }
+      },
+      "title": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.Object"
+        },
+        "required": false,
+        "description": "Info title",
+        "defaultValue": {
+          "value": "null",
+          "computed": false
+        }
+      }
+    }
   },
   "TheInfoStyle": {
     "description": "Style for TheInfo",
