@@ -82,10 +82,12 @@ class ExampleComponent extends React.PureComponent {
     return (
       <div>
         <TheInfoStyle/>
-        <TheInfo data={{
-          foo: 'bar',
-          baz: <a>This is baz</a>
-        }}>
+        <TheInfo
+          title="This is title"
+          data={{
+            row01: 'Text as row',
+            row02: <a>Node as row</a>
+          }}>
         </TheInfo>
       </div>
 

@@ -28,20 +28,41 @@ TheInfoStyle.data = (options) => {
   const { ThemeValues } = TheStyle
   let {
     dominantColor = ThemeValues.dominantColor,
+    contentWidth = ThemeValues.contentWidth,
+    lightBackgroundColor = ThemeValues.lightBackgroundColor,
+    lightTextColor = ThemeValues.lightTextColor,
     lightBorderColor = ThemeValues.lightBorderColor
   } = options
   return asStyleData('.the-info', {
-    '&': {},
+    '&': {
+      display: 'block',
+      margin: '0 auto',
+      maxWidth: contentWidth
+    },
+    '.the-info-header': {
+      margin: 0,
+      fontSize: 'small',
+      backgroundColor: lightBackgroundColor,
+      color: lightTextColor,
+      padding: '1px 8px',
+      borderBottom: `1px solid ${lightBorderColor}`,
+      fontWeight: 'normal'
+    },
     '.the-info-row': {
       display: 'flex',
       justifyContent: 'space-between',
       alignItems: 'center',
-      borderBottom: `1px solid ${lightBorderColor}`
+      borderBottom: `1px solid ${lightBorderColor}`,
+      padding: 4
     },
     '.the-info-row-label': {
-      display: 'inline-block'
+      display: 'inline-block',
+      padding: 4
     },
-    '.the-info-row-value': {}
+    '.the-info-row-value': {
+      display: 'inline-block',
+      padding: 4
+    }
   })
 }
 

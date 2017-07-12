@@ -15,6 +15,7 @@ class TheInfo extends React.PureComponent {
     const { props } = s
     let {
       className,
+      title,
       data,
       children
     } = props
@@ -24,15 +25,38 @@ class TheInfo extends React.PureComponent {
            className={classnames('the-info', className)}
       >
         {
-          Object.keys(data || {}).map((label) => (
-            <TheInfo.Row key={label}
-                         label={label}
-                         value={data[ label ]}
-            >
-            </TheInfo.Row>
-          ))
+          title && (
+            <TheInfo.Header>{title}</TheInfo.Header>
+          )
         }
-        {children}
+        <TheInfo.Body>
+          {
+            Object.keys(data || {}).map((label) => (
+              <TheInfo.Row key={label}
+                           label={label}
+                           value={data[ label ]}
+              >
+              </TheInfo.Row>
+            ))
+          }
+          {children}
+        </TheInfo.Body>
+      </div>
+    )
+  }
+
+  static Header ({ className, children }) {
+    return (
+      <h5 className={classnames('the-info-header', className)}>
+        {children }
+      </h5>
+    )
+  }
+
+  static Body ({ className, children }) {
+    return (
+      <div className={classnames('the-info-body', className)}>
+        {children }
       </div>
     )
   }
@@ -55,10 +79,13 @@ TheInfo.Style = TheInfoStyle
 
 TheInfo.propTypes = {
   /** Info data */
-  data: PropTypes.Object
+  data: PropTypes.Object,
+  /** Info title */
+  title: PropTypes.Object
 }
 
 TheInfo.defaultProps = {
+  title: null,
   data: {}
 }
 
