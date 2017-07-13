@@ -113,6 +113,12 @@ Components
 
 Info of the-component
 
+**Props**
+
+| Name | Type | Description | Default |
+| --- | --- | ---- | ---- |
+| `data` | custom  | Info data | `{}` |
+| `title` | custom  | Info title | `null` |
 
 ### TheInfoStyle
 

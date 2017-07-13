@@ -1,7 +1,7 @@
 /**
  * Info of the-component
  * @module the-info
- * @version 1.0.0
+ * @version 1.0.1
  */
 'use strict'
 

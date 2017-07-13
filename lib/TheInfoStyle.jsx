@@ -57,7 +57,9 @@ TheInfoStyle.data = (options) => {
     },
     '.the-info-row-label': {
       display: 'inline-block',
-      padding: 4
+      padding: 4,
+      fontSize: 'smaller',
+      color: lightTextColor
     },
     '.the-info-row-value': {
       display: 'inline-block',
