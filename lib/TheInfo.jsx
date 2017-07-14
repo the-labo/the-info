@@ -79,9 +79,9 @@ TheInfo.Style = TheInfoStyle
 
 TheInfo.propTypes = {
   /** Info data */
-  data: PropTypes.Object,
+  data: PropTypes.objectOf(PropTypes.node),
   /** Info title */
-  title: PropTypes.Object
+  title: PropTypes.string
 }
 
 TheInfo.defaultProps = {

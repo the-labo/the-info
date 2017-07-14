@@ -117,8 +117,8 @@ Info of the-component
 
 | Name | Type | Description | Default |
 | --- | --- | ---- | ---- |
-| `data` | custom  | Info data | `{}` |
-| `title` | custom  | Info title | `null` |
+| `data` | objectOf node | Info data | `{}` |
+| `title` | string  | Info title | `null` |
 
 ### TheInfoStyle
 

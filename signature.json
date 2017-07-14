@@ -49,8 +49,10 @@
     "props": {
       "data": {
         "type": {
-          "name": "custom",
-          "raw": "PropTypes.Object"
+          "name": "objectOf",
+          "value": {
+            "name": "node"
+          }
         },
         "required": false,
         "description": "Info data",
@@ -61,8 +63,7 @@
       },
       "title": {
         "type": {
-          "name": "custom",
-          "raw": "PropTypes.Object"
+          "name": "string"
         },
         "required": false,
         "description": "Info title",
