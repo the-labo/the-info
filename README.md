@@ -71,6 +71,8 @@ $ npm install the-info --save
 Usage
 ---------
 
+[Live Demo](https://the-labo.github.io/the-info/doc/demo/index.html#/) is hosted on GitHub Page
+
 ```javascript
 'use strict'
 
