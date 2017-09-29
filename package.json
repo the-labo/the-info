@@ -1,6 +1,6 @@
 {
   "name": "the-info",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Info of the-component",
   "main": "shim",
   "scripts": {
