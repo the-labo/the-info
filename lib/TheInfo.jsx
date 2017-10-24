@@ -12,7 +12,7 @@ import { htmlAttributesFor, eventHandlersFor } from 'the-component-util'
 class TheInfo extends React.PureComponent {
   render () {
     const s = this
-    const { props } = s
+    const {props} = s
     let {
       className,
       title,
@@ -20,8 +20,8 @@ class TheInfo extends React.PureComponent {
       children
     } = props
     return (
-      <div {...htmlAttributesFor(props, { except: [ 'className' ] })}
-           {...eventHandlersFor(props, { except: [] })}
+      <div {...htmlAttributesFor(props, {except: ['className', 'data']})}
+           {...eventHandlersFor(props, {except: []})}
            className={classnames('the-info', className)}
       >
         {
@@ -34,7 +34,7 @@ class TheInfo extends React.PureComponent {
             Object.keys(data || {}).map((label) => (
               <TheInfo.Row key={label}
                            label={label}
-                           value={data[ label ]}
+                           value={data[label]}
               >
               </TheInfo.Row>
             ))
@@ -45,23 +45,23 @@ class TheInfo extends React.PureComponent {
     )
   }
 
-  static Header ({ className, children }) {
+  static Header ({className, children}) {
     return (
       <h5 className={classnames('the-info-header', className)}>
-        {children }
+        {children}
       </h5>
     )
   }
 
-  static Body ({ className, children }) {
+  static Body ({className, children}) {
     return (
       <div className={classnames('the-info-body', className)}>
-        {children }
+        {children}
       </div>
     )
   }
 
-  static Row ({ label, value, className, children }) {
+  static Row ({label, value, className, children}) {
     return (
       <div className={classnames('the-info-row', className)}>
         <label className='the-info-row-label'>
