@@ -71,6 +71,20 @@
           "value": "null",
           "computed": false
         }
+      },
+      "keys": {
+        "type": {
+          "name": "arrayOf",
+          "value": {
+            "name": "string"
+          }
+        },
+        "required": false,
+        "description": "Keys to show",
+        "defaultValue": {
+          "value": "null",
+          "computed": false
+        }
       }
     }
   },
