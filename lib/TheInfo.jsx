@@ -11,13 +11,13 @@ import { htmlAttributesFor, eventHandlersFor } from 'the-component-util'
  */
 class TheInfo extends React.PureComponent {
   render () {
-    const s = this
-    const {props} = s
-    let {
+    const {props} = this
+    const {
       className,
       title,
       data,
-      children
+      children,
+      keys,
     } = props
     return (
       <div {...htmlAttributesFor(props, {except: ['className', 'data']})}
@@ -31,7 +31,7 @@ class TheInfo extends React.PureComponent {
         }
         <TheInfo.Body>
           {
-            Object.keys(data || {}).map((label) => (
+            (keys || Object.keys(data || {})).map((label) => (
               <TheInfo.Row key={label}
                            label={label}
                            value={data[label]}
@@ -81,12 +81,15 @@ TheInfo.propTypes = {
   /** Info data */
   data: PropTypes.objectOf(PropTypes.node),
   /** Info title */
-  title: PropTypes.string
+  title: PropTypes.string,
+  /** Keys to show */
+  keys: PropTypes.arrayOf(PropTypes.string),
 }
 
 TheInfo.defaultProps = {
   title: null,
-  data: {}
+  data: {},
+  keys: null,
 }
 
 TheInfo.displayName = 'TheInfo'

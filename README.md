@@ -88,8 +88,11 @@ class ExampleComponent extends React.PureComponent {
           title="This is title"
           data={{
             row01: 'Text as row',
-            row02: <a>Node as row</a>
-          }}>
+            row03: 'Hidden row',
+            row02: <a>Node as row</a>,
+          }}
+          keys={['row02', 'row01']}
+        >
         </TheInfo>
       </div>
 
