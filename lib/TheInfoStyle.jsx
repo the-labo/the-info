@@ -1,14 +1,14 @@
 'use strict'
 
-import React from 'react'
-import PropTypes from 'prop-types'
 import classnames from 'classnames'
-import TheStyle from 'the-style'
+import PropTypes from 'prop-types'
+import React from 'react'
 import { asStyleData } from 'the-component-util'
+import TheStyle from 'the-style'
 
 /** Style for TheInfo */
-const TheInfoStyle = ({ id, className, options }) => (
-  <TheStyle { ...{ id } }
+const TheInfoStyle = ({className, id, options }) => (
+  <TheStyle { ...{id } }
             className={ classnames('the-info-style', className) }
             styles={ TheInfoStyle.data(options) }
   />
@@ -17,54 +17,54 @@ const TheInfoStyle = ({ id, className, options }) => (
 TheInfoStyle.displayName = 'TheInfoStyle'
 TheInfoStyle.propTypes = {
   /** Style options */
-  options: PropTypes.object
+  options: PropTypes.object,
 }
 
 TheInfoStyle.defaultProps = {
-  options: {}
+  options: {},
 }
 
 TheInfoStyle.data = (options) => {
-  const { ThemeValues } = TheStyle
+  const {ThemeValues } = TheStyle
   let {
-    dominantColor = ThemeValues.dominantColor,
     contentWidth = ThemeValues.contentWidth,
+    dominantColor = ThemeValues.dominantColor,
     lightBackgroundColor = ThemeValues.lightBackgroundColor,
+    lightBorderColor = ThemeValues.lightBorderColor,
     lightTextColor = ThemeValues.lightTextColor,
-    lightBorderColor = ThemeValues.lightBorderColor
   } = options
   return asStyleData('.the-info', {
-    '&': {
-      display: 'block',
-      margin: '0 auto',
-      maxWidth: contentWidth
-    },
     '.the-info-header': {
-      margin: 0,
-      fontSize: 'small',
       backgroundColor: lightBackgroundColor,
-      color: lightTextColor,
-      padding: '1px 8px',
       borderBottom: `1px solid ${lightBorderColor}`,
-      fontWeight: 'normal'
+      color: lightTextColor,
+      fontSize: 'small',
+      fontWeight: 'normal',
+      margin: 0,
+      padding: '1px 8px',
     },
     '.the-info-row': {
-      display: 'flex',
-      justifyContent: 'space-between',
       alignItems: 'center',
       borderBottom: `1px solid ${lightBorderColor}`,
-      padding: 4
+      display: 'flex',
+      justifyContent: 'space-between',
+      padding: 4,
     },
     '.the-info-row-label': {
+      color: lightTextColor,
       display: 'inline-block',
-      padding: 4,
       fontSize: 'smaller',
-      color: lightTextColor
+      padding: 4,
     },
     '.the-info-row-value': {
       display: 'inline-block',
-      padding: 4
-    }
+      padding: 4,
+    },
+    '&': {
+      display: 'block',
+      margin: '0 auto',
+      maxWidth: contentWidth,
+    },
   })
 }
 

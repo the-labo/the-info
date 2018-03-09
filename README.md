@@ -124,6 +124,7 @@ Info of the-component
 | --- | --- | ---- | ---- |
 | `data` | objectOf node | Info data | `{}` |
 | `title` | string  | Info title | `null` |
+| `keys` | arrayOf string | Keys to show | `null` |
 
 ### TheInfoStyle
 

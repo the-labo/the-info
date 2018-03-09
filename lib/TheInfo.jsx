@@ -1,23 +1,63 @@
 'use strict'
 
-import React from 'react'
-import PropTypes from 'prop-types'
 import classnames from 'classnames'
+import PropTypes from 'prop-types'
+import React from 'react'
+import { eventHandlersFor, htmlAttributesFor } from 'the-component-util'
 import TheInfoStyle from './TheInfoStyle'
-import { htmlAttributesFor, eventHandlersFor } from 'the-component-util'
 
 /**
  * Info of the-component
  */
-class TheInfo extends React.PureComponent {
+class TheInfo extends React.Component {
+  static Body ({children, className}) {
+    return (
+      <div className={classnames('the-info-body', className)}
+           role='rowGroup'
+      >
+        {children}
+      </div>
+    )
+  }
+
+  static Header ({children, className}) {
+    return (
+      <h5 className={classnames('the-info-header', className)}
+          role='heading'
+      >
+        {children}
+      </h5>
+    )
+  }
+
+  static Row ({children, className, label, value}) {
+    return (
+      <div className={classnames('the-info-row', className)}
+           role='row'
+      >
+        <label className='the-info-row-label'
+               role='rowheader'
+        >
+          {label}
+        </label>
+        <div className='the-info-row-value'
+             role='gridcell'
+             aria-label={label}
+        >
+          {value}
+        </div>
+      </div>
+    )
+  }
+
   render () {
     const {props} = this
     const {
-      className,
-      title,
-      data,
       children,
+      className,
+      data,
       keys,
+      title,
     } = props
     return (
       <div {...htmlAttributesFor(props, {except: ['className', 'data']})}
@@ -44,35 +84,6 @@ class TheInfo extends React.PureComponent {
       </div>
     )
   }
-
-  static Header ({className, children}) {
-    return (
-      <h5 className={classnames('the-info-header', className)}>
-        {children}
-      </h5>
-    )
-  }
-
-  static Body ({className, children}) {
-    return (
-      <div className={classnames('the-info-body', className)}>
-        {children}
-      </div>
-    )
-  }
-
-  static Row ({label, value, className, children}) {
-    return (
-      <div className={classnames('the-info-row', className)}>
-        <label className='the-info-row-label'>
-          {label}
-        </label>
-        <div className='the-info-row-value'>
-          {value}
-        </div>
-      </div>
-    )
-  }
 }
 
 TheInfo.Style = TheInfoStyle
@@ -80,16 +91,17 @@ TheInfo.Style = TheInfoStyle
 TheInfo.propTypes = {
   /** Info data */
   data: PropTypes.objectOf(PropTypes.node),
-  /** Info title */
-  title: PropTypes.string,
   /** Keys to show */
   keys: PropTypes.arrayOf(PropTypes.string),
+  /** Info title */
+  title: PropTypes.string,
 }
 
 TheInfo.defaultProps = {
-  title: null,
   data: {},
   keys: null,
+  title: null,
+  role: 'grid',
 }
 
 TheInfo.displayName = 'TheInfo'
