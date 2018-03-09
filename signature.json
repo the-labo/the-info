@@ -4,20 +4,6 @@
     "displayName": "TheInfo",
     "methods": [
       {
-        "name": "Header",
-        "docblock": null,
-        "modifiers": [
-          "static"
-        ],
-        "params": [
-          {
-            "name": "{className, children}",
-            "type": null
-          }
-        ],
-        "returns": null
-      },
-      {
         "name": "Body",
         "docblock": null,
         "modifiers": [
@@ -25,7 +11,21 @@
         ],
         "params": [
           {
-            "name": "{className, children}",
+            "name": "{children, className}",
+            "type": null
+          }
+        ],
+        "returns": null
+      },
+      {
+        "name": "Header",
+        "docblock": null,
+        "modifiers": [
+          "static"
+        ],
+        "params": [
+          {
+            "name": "{children, className}",
             "type": null
           }
         ],
@@ -39,7 +39,7 @@
         ],
         "params": [
           {
-            "name": "{label, value, className, children}",
+            "name": "{children, className, label, value}",
             "type": null
           }
         ],
@@ -61,17 +61,6 @@
           "computed": false
         }
       },
-      "title": {
-        "type": {
-          "name": "string"
-        },
-        "required": false,
-        "description": "Info title",
-        "defaultValue": {
-          "value": "null",
-          "computed": false
-        }
-      },
       "keys": {
         "type": {
           "name": "arrayOf",
@@ -83,6 +72,23 @@
         "description": "Keys to show",
         "defaultValue": {
           "value": "null",
+          "computed": false
+        }
+      },
+      "title": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Info title",
+        "defaultValue": {
+          "value": "null",
+          "computed": false
+        }
+      },
+      "role": {
+        "defaultValue": {
+          "value": "'grid'",
           "computed": false
         }
       }

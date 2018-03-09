@@ -40,9 +40,9 @@ class TheInfo extends React.Component {
         >
           {label}
         </label>
-        <div className='the-info-row-value'
+        <div aria-label={label}
+             className='the-info-row-value'
              role='gridcell'
-             aria-label={label}
         >
           {value}
         </div>
@@ -100,8 +100,8 @@ TheInfo.propTypes = {
 TheInfo.defaultProps = {
   data: {},
   keys: null,
-  title: null,
   role: 'grid',
+  title: null,
 }
 
 TheInfo.displayName = 'TheInfo'
