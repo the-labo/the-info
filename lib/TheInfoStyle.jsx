@@ -7,10 +7,10 @@ import { asStyleData } from 'the-component-util'
 import TheStyle from 'the-style'
 
 /** Style for TheInfo */
-const TheInfoStyle = ({className, id, options }) => (
-  <TheStyle { ...{id } }
-            className={ classnames('the-info-style', className) }
-            styles={ TheInfoStyle.data(options) }
+const TheInfoStyle = ({className, id, options}) => (
+  <TheStyle {...{id}}
+            className={classnames('the-info-style', className)}
+            styles={TheInfoStyle.data(options)}
   />
 )
 
@@ -25,7 +25,7 @@ TheInfoStyle.defaultProps = {
 }
 
 TheInfoStyle.data = (options) => {
-  const {ThemeValues } = TheStyle
+  const {ThemeValues} = TheStyle
   let {
     contentWidth = ThemeValues.contentWidth,
     dominantColor = ThemeValues.dominantColor,
@@ -59,6 +59,7 @@ TheInfoStyle.data = (options) => {
     '.the-info-row-value': {
       display: 'inline-block',
       padding: 4,
+      textAlign: 'right',
     },
     '&': {
       display: 'block',

@@ -2,7 +2,7 @@
 /**
  * Info of the-component
  * @module the-info
- * @version 2.0.3
+ * @version 2.0.4
  */
 'use strict'
 

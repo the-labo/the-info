@@ -123,8 +123,9 @@ Info of the-component
 | Name | Type | Description | Default |
 | --- | --- | ---- | ---- |
 | `data` | objectOf node | Info data | `{}` |
-| `title` | string  | Info title | `null` |
 | `keys` | arrayOf string | Keys to show | `null` |
+| `title` | string  | Info title | `null` |
+| `role` |   |  | `'grid'` |
 
 ### TheInfoStyle
 
