@@ -54,7 +54,11 @@ TheInfoStyle.data = (options) => {
       color: lightTextColor,
       display: 'inline-block',
       fontSize: 'smaller',
+      maxWidth: '50%',
+      overflow: 'hidden',
       padding: 4,
+      textOverflow: 'ellipsis',
+      whiteSpace: 'nowrap',
     },
     '.the-info-row-value': {
       display: 'inline-block',
