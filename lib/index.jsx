@@ -9,7 +9,6 @@ import TheInfo from './TheInfo'
 import TheInfoStyle from './TheInfoStyle'
 
 export {
-  TheInfo,
-  TheInfoStyle,
+ TheInfo,
+ TheInfoStyle,
 }
-
