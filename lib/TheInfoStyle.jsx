@@ -53,6 +53,7 @@ TheInfoStyle.data = (options) => {
     '.the-info-row-label': {
       color: lightTextColor,
       display: 'inline-block',
+      flexShrink: 0,
       fontSize: 'smaller',
       maxWidth: '50%',
       overflow: 'hidden',
@@ -62,8 +63,10 @@ TheInfoStyle.data = (options) => {
     },
     '.the-info-row-value': {
       display: 'inline-block',
+      overflow: 'hidden',
       padding: 4,
       textAlign: 'right',
+      textOverflow: 'ellipsis',
     },
     '&': {
       display: 'block',
