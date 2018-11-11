@@ -4,13 +4,12 @@ import classnames from 'classnames'
 import PropTypes from 'prop-types'
 import React from 'react'
 import { eventHandlersFor, htmlAttributesFor } from 'the-component-util'
-import TheInfoStyle from './TheInfoStyle'
 
 /**
  * Info of the-component
  */
 class TheInfo extends React.Component {
-  static Body ({children, className}) {
+  static Body ({ children, className }) {
     return (
       <div className={classnames('the-info-body', className)}
            role='rowGroup'
@@ -20,7 +19,7 @@ class TheInfo extends React.Component {
     )
   }
 
-  static Header ({children, className}) {
+  static Header ({ children, className }) {
     return (
       <h5 className={classnames('the-info-header', className)}
           role='heading'
@@ -30,7 +29,7 @@ class TheInfo extends React.Component {
     )
   }
 
-  static Row ({children, className, label, value}) {
+  static Row ({ children, className, label, value }) {
     return (
       <div className={classnames('the-info-row', className)}
            role='row'
@@ -51,7 +50,7 @@ class TheInfo extends React.Component {
   }
 
   render () {
-    const {props} = this
+    const { props } = this
     const {
       children,
       className,
@@ -60,8 +59,8 @@ class TheInfo extends React.Component {
       title,
     } = props
     return (
-      <div {...htmlAttributesFor(props, {except: ['className', 'data']})}
-           {...eventHandlersFor(props, {except: []})}
+      <div {...htmlAttributesFor(props, { except: ['className', 'data'] })}
+           {...eventHandlersFor(props, { except: [] })}
            className={classnames('the-info', className)}
       >
         {
@@ -85,8 +84,6 @@ class TheInfo extends React.Component {
     )
   }
 }
-
-TheInfo.Style = TheInfoStyle
 
 TheInfo.propTypes = {
   /** Info data */

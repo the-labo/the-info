@@ -11,7 +11,7 @@
         ],
         "params": [
           {
-            "name": "{children, className}",
+            "name": "{ children, className }",
             "type": null
           }
         ],
@@ -25,7 +25,7 @@
         ],
         "params": [
           {
-            "name": "{children, className}",
+            "name": "{ children, className }",
             "type": null
           }
         ],
@@ -39,7 +39,7 @@
         ],
         "params": [
           {
-            "name": "{children, className, label, value}",
+            "name": "{ children, className, label, value }",
             "type": null
           }
         ],
