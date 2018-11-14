@@ -33,7 +33,12 @@ TheInfoStyle.data = (options) => {
     lightBorderColor = ThemeValues.lightBorderColor,
     lightTextColor = ThemeValues.lightTextColor,
   } = options
-  return asStyleData('.the-info', {
+  return asStyleData({
+    '.the-info': {
+      display: 'block',
+      margin: '0 auto',
+      maxWidth: contentWidth,
+    },
     '.the-info-header': {
       backgroundColor: lightBackgroundColor,
       borderBottom: `1px solid ${lightBorderColor}`,
@@ -67,11 +72,6 @@ TheInfoStyle.data = (options) => {
       padding: 4,
       textAlign: 'right',
       textOverflow: 'ellipsis',
-    },
-    '&': {
-      display: 'block',
-      margin: '0 auto',
-      maxWidth: contentWidth,
     },
   })
 }
